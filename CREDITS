@@ -1,0 +1,4 @@
+Thanks to:
+  Ramzi Zabaneh <ramzi.zabaneh@gs.com> for Solaris 2.6 port and bug fixes.
+  Rob Browning <rlb@defaultvalue.org> for patches supporting lstat() and S_ISXXXX.
+  Corey Stup <coreystup@gmail.com> for AIX 5 Makefile entry.
