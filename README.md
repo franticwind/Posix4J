@@ -1,11 +1,11 @@
 # Posix4J
 Project based on Posix for Java http://www.bmsi.com/java/posix/
 
-#2、C++库编译
+# 1、C++库编译
 &nbsp;&nbsp;&nbsp;&nbsp;下面介绍下具体的用法（github上没有readme，没有任何说明文档，估计大家看着都不敢试了）。
 &nbsp;&nbsp;&nbsp;&nbsp;首先是编译C++库，把代码上传到linux目标机器，执行make，生成posix.so。
 
-#3、Java环境应用
+# 2、Java环境应用
 &nbsp;&nbsp;&nbsp;&nbsp;posix.so重命名libposix.so，放到java依赖lib库下面（也可以放到jre库目录），启动脚本加载进去。
 如下：
 ```
