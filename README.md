@@ -2,17 +2,16 @@
 Project based on Posix for Java http://www.bmsi.com/java/posix/
 
 # 1、C++库编译
-&nbsp;&nbsp;&nbsp;&nbsp;下面介绍下具体的用法（github上没有readme，没有任何说明文档，估计大家看着都不敢试了）。
-&nbsp;&nbsp;&nbsp;&nbsp;首先是编译C++库，把代码上传到linux目标机器，执行make，生成posix.so。
+首先是编译C++库，把代码上传到linux目标机器，执行make，生成posix.so。
 
 # 2、Java环境应用
-&nbsp;&nbsp;&nbsp;&nbsp;posix.so重命名libposix.so，放到java依赖lib库下面（也可以放到jre库目录），启动脚本加载进去。
+posix.so重命名libposix.so，放到java依赖lib库下面（也可以放到jre库目录），启动脚本加载进去。
 如下：
 ```
 export LD_LIBRARY_PATH=$APP_HOME/lib:$LD_LIBRARY_PATH
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;集成java API代码，直接拷贝xx目录到项目源代码中（也可以自己编译成jar包引用进去），注意package路径不要变，固定posix，后面就可以直接调用API进行共享内存操作了，核心类SharedMem、CPtr。
-&nbsp;&nbsp;&nbsp;&nbsp;主要API如下：
+集成java API代码，直接拷贝xx目录到项目源代码中（也可以自己编译成jar包引用进去），注意package路径不要变，固定posix，后面就可以直接调用API进行共享内存操作了，核心类SharedMem、CPtr。
+主要API如下：
 ```
 /** Copy bytes out of C memory into a Java byte array. */
 public native void copyOut(int off,byte[] ba,int pos,int cnt);
